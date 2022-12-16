@@ -9,31 +9,31 @@ const Home: React.FC = () => {
       </div>
       <div className="grid grid-cols-3 gap-8">
         <div className="aspect-video rounded-md border text-center grid place-items-center">
-          <Link to="/firesidePath">Fireside</Link>
+          <Link to="/a/firesidePath">Fireside</Link>
         </div>
         <div className="aspect-video rounded-md border text-center grid place-items-center">
-          <Link to="/frankincensePath">Frankincense</Link>
+          <Link to="/a/frankincensePath">Frankincense</Link>
         </div>
         <div className="aspect-video rounded-md border text-center grid place-items-center">
-          <Link to="/gameroomPath">Gameroom</Link>
+          <Link to="/a/gameroomPath">Gameroom</Link>
         </div>
         <div className="aspect-video rounded-md border text-center grid place-items-center">
-          <Link to="/innPath">Inn</Link>
+          <Link to="/a/innPath">Inn</Link>
         </div>
         <div className="aspect-video rounded-md border text-center grid place-items-center">
-          <Link to="/northPolePath">North Pole</Link>
+          <Link to="/a/northPolePath">North Pole</Link>
         </div>
         <div className="aspect-video rounded-md border text-center grid place-items-center">
-          <Link to="/sleighPath">Sleigh</Link>
+          <Link to="/a/sleighPath">Sleigh</Link>
         </div>
         <div className="aspect-video rounded-md border text-center grid place-items-center">
-          <Link to="/stablesPath">Stables</Link>
+          <Link to="/a/stablesPath">Stables</Link>
         </div>
         <div className="aspect-video rounded-md border text-center grid place-items-center">
-          <Link to="/treeFarmPath">Tree Farm</Link>
+          <Link to="/a/treeFarmPath">Tree Farm</Link>
         </div>
         <div className="aspect-video rounded-md border text-center grid place-items-center">
-          <Link to="/winterWonderlandPath">Winter Wonderland</Link>
+          <Link to="/a/winterWonderlandPath">Winter Wonderland</Link>
         </div>
       </div>
     </div>

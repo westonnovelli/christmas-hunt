@@ -1,0 +1,15 @@
+.mygrid {
+  grid-template-columns: 2rem auto 2rem;
+  grid-template-rows: 6rem auto 6rem;
+  grid-template-areas: "link title ."
+                       ". content ."
+                       ".    .    .";
+}
+
+.myTitle {
+  grid-area: title;
+}
+
+.mycontent {
+  grid-area: content;
+}

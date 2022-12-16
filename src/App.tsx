@@ -7,6 +7,8 @@ import {
   useMatch,
 } from '@tanstack/react-router';
 import React from 'react';
+import { z } from 'zod';
+
 import Fireside from './activities/Fireside';
 import Frankincense from './activities/Frankincense';
 import Gameroom from './activities/Gameroom';
@@ -20,14 +22,21 @@ import Home from './Home';
 import Layout from './layout/Layout';
 import Map from './Map';
 
-export const rootRoute = createRouteConfig({
+export const rootRoute = createRouteConfig();
+
+const layout = rootRoute.createRoute({
+  id: 'a',
+  path: '/a',
+  validateSearch: z.object({
+    c: z.string().optional(),
+  }),
   component: () => {
+    const match = useMatch('/a', { strict: false });
+    const mode = match?.routeSearch?.c;
     return (
       <Layout>
-        <Link to="/">Home</Link>
-        <div className="mx-2">
-          <Outlet />
-        </div>
+        {mode !== 'live' && <Link to="/">Home</Link>}
+        <Outlet />
       </Layout>
     );
   },
@@ -43,47 +52,47 @@ const map = rootRoute.createRoute({
   component: Map,
 });
 
-const fireside = rootRoute.createRoute({
+const fireside = layout.createRoute({
   path: '/firesidePath',
   component: Fireside,
 });
 
-const frankincense = rootRoute.createRoute({
+const frankincense = layout.createRoute({
   path: '/frankincensePath',
   component: Frankincense,
 });
 
-const gameroom = rootRoute.createRoute({
+const gameroom = layout.createRoute({
   path: '/gameroomPath',
   component: Gameroom,
 });
 
-const inn = rootRoute.createRoute({
+const inn = layout.createRoute({
   path: '/innPath',
   component: Inn,
 });
 
-const northPole = rootRoute.createRoute({
+const northPole = layout.createRoute({
   path: '/northPolePath',
   component: NorthPole,
 });
 
-const sleigh = rootRoute.createRoute({
+const sleigh = layout.createRoute({
   path: '/sleighPath',
   component: Sleigh,
 });
 
-const stables = rootRoute.createRoute({
+const stables = layout.createRoute({
   path: '/stablesPath',
   component: Stables,
 });
 
-const treeFarm = rootRoute.createRoute({
+const treeFarm = layout.createRoute({
   path: '/treeFarmPath',
   component: TreeFarm,
 });
 
-const winterWonderland = rootRoute.createRoute({
+const winterWonderland = layout.createRoute({
   path: '/winterWonderlandPath',
   component: WinterWonderland,
 });
@@ -91,21 +100,23 @@ const winterWonderland = rootRoute.createRoute({
 const routeConfig = rootRoute.addChildren([
   index,
   map,
-  fireside,
-  frankincense,
-  gameroom,
-  inn,
-  northPole,
-  sleigh,
-  stables,
-  treeFarm,
-  winterWonderland,
+  layout.addChildren([
+    fireside,
+    frankincense,
+    gameroom,
+    inn,
+    northPole,
+    sleigh,
+    stables,
+    treeFarm,
+    winterWonderland,
+  ]),
 ]);
 const router = createReactRouter({ routeConfig });
 
 declare module '@tanstack/react-router' {
   interface RegisterRouter {
-    router: typeof router
+    router: typeof router;
   }
 }
 
