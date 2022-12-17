@@ -7,15 +7,15 @@ const Frankincense: React.FC = () => {
     <>
       <Title>
         Frankincense and Myrrh Shop:{' '}
-        <span className="text-amber-200">We buy Gold!</span>
+        <span className="text-red-300">We buy Gold!</span>
       </Title>
       <div className="mycontent">
         <Paragraph>
           Take a picture of the place in the{' '}
-          <span className="text-amber-200">bible</span> with these
+          <span className="text-red-300">Bible</span> with these
           (approximate) words
         </Paragraph>
-        <div className="bg-orange-200 p-6 text-red-500 rounded">
+        <div className="bg-emerald-600 p-4 text-emerald-100 rounded">
           <blockquote>
             For unto you is born this day in the city of David a Savior, who is
             Christ the Lord. And this will be a sign for you: you will find a

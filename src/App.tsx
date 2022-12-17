@@ -53,47 +53,47 @@ const map = rootRoute.createRoute({
 });
 
 const fireside = layout.createRoute({
-  path: '/firesidePath',
+  path: '/Yp7H',
   component: Fireside,
 });
 
 const frankincense = layout.createRoute({
-  path: '/frankincensePath',
+  path: '/8e2I',
   component: Frankincense,
 });
 
 const gameroom = layout.createRoute({
-  path: '/gameroomPath',
+  path: '/bOrV',
   component: Gameroom,
 });
 
 const inn = layout.createRoute({
-  path: '/innPath',
+  path: '/BALc',
   component: Inn,
 });
 
 const northPole = layout.createRoute({
-  path: '/northPolePath',
+  path: '/f9kN',
   component: NorthPole,
 });
 
 const sleigh = layout.createRoute({
-  path: '/sleighPath',
+  path: '/0TIx',
   component: Sleigh,
 });
 
 const stables = layout.createRoute({
-  path: '/stablesPath',
+  path: '/1ms8',
   component: Stables,
 });
 
 const treeFarm = layout.createRoute({
-  path: '/treeFarmPath',
+  path: '/_9iw',
   component: TreeFarm,
 });
 
 const winterWonderland = layout.createRoute({
-  path: '/winterWonderlandPath',
+  path: '/gQnv',
   component: WinterWonderland,
 });
 
@@ -110,7 +110,7 @@ const routeConfig = rootRoute.addChildren([
     stables,
     treeFarm,
     winterWonderland,
-  ]),
+  ])
 ]);
 const router = createReactRouter({ routeConfig });
 

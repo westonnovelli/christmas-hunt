@@ -7,22 +7,22 @@ const Question: React.FC = () => {
 
   const answers = [
     <button onClick={() => submitAnswer(false)} key="A" className="rounded p-4 border border-red-300 text-red-300">
-      rats
+      Boxing Day
     </button>,
-    <button onClick={() => submitAnswer(true)} key="B" className="rounded p-4 border border-red-300 text-red-300">
-      mice
+    <button onClick={() => submitAnswer(false)} key="B" className="rounded p-4 border border-red-300 text-red-300">
+      Canadian Thanksgiving
     </button>,
     <button onClick={() => submitAnswer(false)} key="C" className="rounded p-4 border border-red-300 text-red-300">
-      pirates
+      St. Luke's Feast Day
     </button>,
-    <button onClick={() => submitAnswer(false)} key="D" className="rounded p-4 border border-red-300 text-red-300">
-      nutcrackers
+    <button onClick={() => submitAnswer(true)} key="D" className="rounded p-4 border border-red-300 text-red-300">
+      Epiphany
     </button>,
   ];
 
   return (
     <div className="mycontent">
-      In <span className="rounded p-1 bg-emerald-600 text-emerald-100">The Nutcracker</span> what chases the children around the tree?
+      What happens <span className="text-red-300">12 days</span> after Christmas?
       <div className="mt-4 flex flex-col gap-4">{shuffle(answers)}</div>
     </div>
   );

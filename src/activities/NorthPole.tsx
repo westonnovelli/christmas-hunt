@@ -8,8 +8,8 @@ const NorthPole: React.FC = () => (
     <div className="mycontent">
       <Paragraph>
         Take a video of someone telling the{' '}
-        <span className="text-amber-200">Christmas story</span> as{' '}
-        <i className="text-amber-200">dramatically</i> as possible. Text it to
+        <span className="text-red-300">Christmas story</span> as{' '}
+        <i className="text-red-300">dramatically</i> as possible. Text it to
         Weston.
       </Paragraph>
     </div>

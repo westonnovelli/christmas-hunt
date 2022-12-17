@@ -7,22 +7,22 @@ const Question: React.FC = () => {
 
   const answers = [
     <button onClick={() => submitAnswer(false)} key="A" className="rounded p-4 border border-red-300 text-red-300">
-      rats
+      ¡Fleas nah Víta!
     </button>,
-    <button onClick={() => submitAnswer(true)} key="B" className="rounded p-4 border border-red-300 text-red-300">
-      mice
+    <button onClick={() => submitAnswer(false)} key="B" className="rounded p-4 border border-red-300 text-red-300">
+      ¡Feliz cumpleaños!
     </button>,
-    <button onClick={() => submitAnswer(false)} key="C" className="rounded p-4 border border-red-300 text-red-300">
-      pirates
+    <button onClick={() => submitAnswer(true)} key="C" className="rounded p-4 border border-red-300 text-red-300">
+      ¡Feliz Navidad!
     </button>,
     <button onClick={() => submitAnswer(false)} key="D" className="rounded p-4 border border-red-300 text-red-300">
-      nutcrackers
+      Bien Jesús!
     </button>,
   ];
 
   return (
     <div className="mycontent">
-      In <span className="rounded p-1 bg-emerald-600 text-emerald-100">The Nutcracker</span> what chases the children around the tree?
+      How do you say <span className="bg-red-600 text-emerald-100 p-1 rounded">Merry Christmas</span> in Spanish?
       <div className="mt-4 flex flex-col gap-4">{shuffle(answers)}</div>
     </div>
   );

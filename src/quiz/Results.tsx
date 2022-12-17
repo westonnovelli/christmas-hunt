@@ -1,6 +1,6 @@
 import { nanoid } from 'nanoid';
 import React from 'react';
-import { computeScore, useQuizContext } from './QuixContext';
+import { computeScore, useQuizContext } from './QuizContext';
 
 const THRESHOLD = 0.8;
 
@@ -16,7 +16,7 @@ const Results: React.FC = () => {
       </h1>
       <div className="mycontent text-center">
         <div className="text-5xl">{(score * 100).toFixed(0)}%</div>
-        {!success && <button onClick={restartQuiz} className="bg-orange-200 rounded text-red-500 p-2 mt-8">Try again!</button>}
+        {!success && <button onClick={restartQuiz} className="bg-emerald-600 rounded text-emerald-100 p-2 mt-8">Try again!</button>}
         {success && <div className="text-xs text-emerald-300" style={{fontSize: ".5rem"}}>{nanoid(3)}</div>}
       </div>
     </>

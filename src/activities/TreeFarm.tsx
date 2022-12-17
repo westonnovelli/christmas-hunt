@@ -8,7 +8,7 @@ const TreeFarm: React.FC = () => (
     <div className="mycontent">
       <Paragraph>
         Take a video of someone in your group putting on the winter clothes as{' '}
-        <i className="text-amber-200">fast</i> as possible. Text it to Weston.
+        <i className="text-red-300">fast</i> as possible. Text it to Weston.
       </Paragraph>
     </div>
   </>

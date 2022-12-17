@@ -7,22 +7,22 @@ const Question: React.FC = () => {
 
   const answers = [
     <button onClick={() => submitAnswer(false)} key="A" className="rounded p-4 border border-red-300 text-red-300">
-      rats
+      Luke
     </button>,
-    <button onClick={() => submitAnswer(true)} key="B" className="rounded p-4 border border-red-300 text-red-300">
-      mice
+    <button onClick={() => submitAnswer(false)} key="B" className="rounded p-4 border border-red-300 text-red-300">
+      John
     </button>,
-    <button onClick={() => submitAnswer(false)} key="C" className="rounded p-4 border border-red-300 text-red-300">
-      pirates
+    <button onClick={() => submitAnswer(true)} key="C" className="rounded p-4 border border-red-300 text-red-300">
+      Numbers
     </button>,
     <button onClick={() => submitAnswer(false)} key="D" className="rounded p-4 border border-red-300 text-red-300">
-      nutcrackers
+      Mark
     </button>,
   ];
 
   return (
     <div className="mycontent">
-      In <span className="rounded p-1 bg-emerald-600 text-emerald-100">The Nutcracker</span> what chases the children around the tree?
+      In which of the following books of the Bible would you <span className="text-red-300">NOT</span> find the Christmas story?
       <div className="mt-4 flex flex-col gap-4">{shuffle(answers)}</div>
     </div>
   );

@@ -9,7 +9,7 @@ const Stables: React.FC = () => (
     <Title>Reindeer Stables</Title>
     <div className="mycontent">
       <Paragraph>
-        Complete the Christmas trivia quiz getting at least an <span className="text-amber-200">80%</span>. Screen shot
+        Complete the Christmas trivia quiz getting at least an <span className="text-red-300">80%</span>. Screen shot
         the "congrats" screen and text it to Weston.
       </Paragraph>
       <div className="grid place-items-center mt-8"><StartQuiz /></div>
