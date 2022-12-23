@@ -19,6 +19,7 @@ import Stables from './activities/Stables';
 import TreeFarm from './activities/TreeFarm';
 import WinterWonderland from './activities/WinterWonderland';
 import Home from './Home';
+import Hooray from './Hooray';
 import Layout from './layout/Layout';
 import Map from './Map';
 
@@ -35,7 +36,7 @@ const layout = rootRoute.createRoute({
     const mode = match?.routeSearch?.c;
     return (
       <Layout>
-        {mode !== 'live' && <Link to="/">Home</Link>}
+        {mode !== 'live' && <Link to="/qa">Home</Link>}
         <Outlet />
       </Layout>
     );
@@ -43,7 +44,7 @@ const layout = rootRoute.createRoute({
 });
 
 export const index = rootRoute.createRoute({
-  path: '/',
+  path: '/qa',
   component: Home,
 });
 
@@ -51,6 +52,11 @@ const map = rootRoute.createRoute({
   path: '/map',
   component: Map,
 });
+
+const scanValidate = rootRoute.createRoute({
+  path: '/hooray',
+  component: Hooray,
+})
 
 const fireside = layout.createRoute({
   path: '/Yp7H',
@@ -100,6 +106,7 @@ const winterWonderland = layout.createRoute({
 const routeConfig = rootRoute.addChildren([
   index,
   map,
+  scanValidate,
   layout.addChildren([
     fireside,
     frankincense,
